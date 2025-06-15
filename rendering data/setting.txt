@@ -1,0 +1,12 @@
+fov 90
+screen_size 600 600
+img_size 600 600
+camera_speed 3
+camera_rotation_speed 2
+model_file `C:/Users/chans/OneDrive/python/3D/model/Mercedes Benz C250.stl`
+movement_file `C:/Users/chans/OneDrive/python/3D/rendering data/movement.data`
+light_file `C:/Users/chans/OneDrive/python/3D/rendering data/light.data`
+screen_file `C:/Users/chans/OneDrive/python/3D/rendering data/screen.data`
+img_path `C:/Users/chans/OneDrive/python/3D/img`
+background_color 200 200 200
+normal_interpolation 1

@@ -1,0 +1,58 @@
+file structures
+
+setting file(txt)
+---------------------
+| variable value(s) | * n
+---------------------
+
+movement file
+2byte : frame_num
+-------------------------------
+| 4byte(float) : my_x         |
+| 4byte(float) : my_y         |
+| 4byte(float) : my_z         | * frame num
+| 4byte(float) : eye_x_degree |
+| 4byte(float) : eye_y_degree |
+-------------------------------
+
+light file(txt) v1
+environmental_lighting_r environmental_lighting_g environmental_lighting_b
+directional_light_num   
+------------------------------------------------------
+| v_x v_y v_z r_brightness g_brightness b_brightness | * directional_light_num
+------------------------------------------------------
+point_light_num
+------------------------------------------------
+| x y z r_brightness g_brightness b_brightness | * point_light_num
+------------------------------------------------
+spot_light_num
+-------------------------------------------------------------------
+| x y z v_x v_y v_z degree r_brightness g_brightness b_brightness | * spot_light_num
+-------------------------------------------------------------------
+
+light file(txt) v2
+-----------------------------------------------------------------------------------------------------
+| e(environmental light) environmental_lighting_r environmental_lighting_g environmental_lighting_b |
+|   or                                                                                              |
+| d(directional light) v_x v_y v_z r_brightness g_brightness b_brightness                           |
+|   or                                                                                              |
+| p(point light) x y z r_brightness g_brightness b_brightness                                       |
+|   or                                                                                              |
+| s(spot light) x y z v_x v_y v_z degree r_brightness g_brightness b_brightness                     |
+|   or                                                                                              |
+| #(comment) ~                                                                                      |
+-----------------------------------------------------------------------------------------------------
+
+screen file
+2byte : frame_num
+2byte : screen_x_size
+2byte : screen_y_size
+-----------------------------------------------------
+| ---------------------------------                 |
+| | -------------                 |                 |
+| | | 2byte : r |                 |                 |
+| | | 2byte : g | * screen x size | * screen y size | * frame num
+| | | 2byte : b |                 |                 |
+| | -------------                 |                 |
+| ---------------------------------                 |
+-----------------------------------------------------
