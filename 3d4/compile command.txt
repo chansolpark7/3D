@@ -1,0 +1,14 @@
+# 디버깅용
+cd C:\Users\chans\OneDrive\python\3D\3d4
+gcc -g -c includes/geometry.c
+gcc -g -c includes/list.c
+gcc -g -c includes/project_screen.c
+gcc -g -c includes/screen.c
+gcc -g -c includes/shading.c
+gcc -g -o 3d4 3d4.c geometry.o list.o project_screen.o screen.o shading.o
+
+# 디버깅
+gdb 3d4.exe
+
+# 일반 실행
+3d4.exe
